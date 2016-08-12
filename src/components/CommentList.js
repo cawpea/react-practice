@@ -6,8 +6,8 @@ export default class CommentList extends Component {
 		super(props);
 	}
 	render() {
-		var commentNodes = this.props.data.map((comment, index) => {
-			return (<Comment key={index} author={comment.author}>{comment.text}</Comment>);
+		var commentNodes = this.props.data.map((comment) => {
+			return (<Comment key={comment.id} author={comment.author}>{comment.text}</Comment>);
 		});
 
 		return (
