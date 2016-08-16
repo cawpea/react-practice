@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Comment from './Comment.js';
+import CSSModules from 'react-css-modules';
+import style from './CommentList.css';
 
-export default class CommentList extends Component {
+class CommentList extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -11,9 +13,11 @@ export default class CommentList extends Component {
 		});
 
 		return (
-			<div className='commentList'>
+			<div className='commentList' styleName='base'>
 				{commentNodes}
 			</div>
 		);
 	}
 }
+
+export default CSSModules(CommentList, style);

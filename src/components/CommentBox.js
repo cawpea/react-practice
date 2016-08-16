@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 import CommentList from './CommentList.js';
 import CommentForm from './CommentForm.js';
+import CSSModules from 'react-css-modules';
+import style from './CommentBox.css';
 
-export default class CommentBox extends Component {
+class CommentBox extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -54,7 +56,7 @@ export default class CommentBox extends Component {
 	}
 	render() {
 		return (
-			<div className='commentBox'>
+			<div className='commentBox' styleName='base'>
 				Hello world! I am a CommentBox.
 				<CommentList data={this.state.data}/>
 				<CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)}/>
@@ -62,3 +64,5 @@ export default class CommentBox extends Component {
 		);
 	}
 }
+
+export default CSSModules(CommentBox, style);

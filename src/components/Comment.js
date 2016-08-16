@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import CSSModules from 'react-css-modules';
+import style from './Comment.css';
 
-export default class Comment extends Component {
+class Comment extends Component {
 	render() {
 		return (
-			<div className="comment">
-				<h3 className="commentAuthor">{this.props.author}</h3>
+			<div className="comment" styleName='base'>
+				<h3 className="commentAuthor" styleName='author'>{this.props.author}</h3>
 				<div>
 					{this.props.children}
 				</div>
@@ -12,3 +14,5 @@ export default class Comment extends Component {
 		);
 	}
 }
+
+export default CSSModules(Comment, style);

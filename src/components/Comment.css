@@ -1,0 +1,9 @@
+.base {
+	background: #EEE;
+	padding: 10px;
+}
+.author {
+	font-weight: bold;
+	font-size: 1em;
+	margin: 5px 0;
+}
