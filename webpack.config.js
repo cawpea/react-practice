@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
 	entry: {
-		bundle: './src/app.js'
+		bundle: './src/app.js',
+		'bundle-redux-counter': './src/app-redux-counter.js'
 	},
 	output: {
 		path: path.join( __dirname, 'public' ),
